@@ -1,0 +1,94 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+@media (max-width: 425px) {
+  .navbar-logo {
+    height: 25px !important;
+    width: 25px !important;
+    border-width: 1px !important;
+  }
+  .home-container {
+    margin-top: 80px !important;
+    padding: 0 15px !important;
+  }
+
+  .text-section h1 {
+    font-size: 35px !important;
+    line-height: 1.2 !important;
+  }
+
+  .text-section p {
+    font-size: 16px !important;
+  }
+
+  .window-header,
+  .window-body {
+    width: 250px !important;
+  }
+
+  .responsive-image {
+    width: 220px !important;
+    height: 280px !important;
+  }
+  .skill-card {
+    justify-content: center;
+    text-align: center;
+  }
+  .skill-card span {
+    margin-left: 0 !important;
+    margin-top: 8px;
+    display: block;
+  }
+  .project-img{
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 30px !important;
+    width: 30px !important;
+    border-width: 1.5px !important;
+  }
+  .home-container {
+    margin-top: 100px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .text-section h1 {
+    font-size: 45px !important;
+    line-height: 1.2 !important;
+  }
+
+  .text-section p {
+    font-size: 18px !important;
+  }
+
+  .image-section {
+    margin-left: 0 !important;
+    margin-top: 40px !important;
+  }
+
+  .window-header,
+  .window-body {
+    width: 300px !important;
+  }
+
+  .responsive-image {
+    width: 260px !important;
+    height: 330px !important;
+  }
+  .skill-card {
+    padding: 12px;
+  }
+  img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+   
+}
