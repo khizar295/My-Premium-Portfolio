@@ -4,8 +4,8 @@ body {
 }
 @media (max-width: 425px) {
   .navbar-logo {
-    height: 25px !important;
-    width: 25px !important;
+    height: 45px !important;
+    width: 45px !important;
     border-width: 1px !important;
   }
   .home-container {

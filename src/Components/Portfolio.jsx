@@ -6,6 +6,7 @@ import img3 from "../assets/proj-3.png";
 import img4 from "../assets/proj-4.png";
 import img5 from "../assets/proj-5.png";
 import img6 from "../assets/proj-6.png";
+import img7 from "../assets/proj-7.png";
 import img8 from "../assets/proj-8.png";
 import img9 from "../assets/proj-9.png";
 import img10 from "../assets/proj-10.png";
@@ -53,19 +54,19 @@ export default function Services() {
   const projects = [
     {
       title: "My Premium Portfolio",
-      text: "Creative and responsive Portfolio built <br/> with React.",
+      text: "Creative and responsive Portfolio built <br/> with React.JS.",
       img: img1,
       link: "https://khizar-rehman-portfolio.vercel.app/",
     },
     {
       title: "Systems Limited Website",
-      text: "One of the Top 5 Software Houses in <br/> Pakistan 'Systems Limited's' Clone Website",
+      text: "One of the Top 5 Software Houses in <br/> Pakistan 'Systems Limited's' Clone Website. (React.JS)",
       img: img2,
       link: "https://khizar-system.vercel.app/",
     },
     {
       title: "Social Video Downloader",
-      text: "You can download any video from <br/> Facebook, Instagram, TikTok and YouTube <br/> via Link.",
+      text: "You can download any video from <br/> Facebook, Instagram, TikTok and YouTube <br/> via Link. (React.JS)",
       img: img3,
       link: "https://social-video-downloader-theta.vercel.app/",
     },
@@ -88,14 +89,14 @@ export default function Services() {
       link: "https://e-shopping-store-phi.vercel.app/",
     },
     {
-      title: "Education Platform",
-      text: "E-learning portal with video and progress tracking.",
-      img: "https://via.placeholder.com/300x200?text=Education",
-      link: "https://example.com/education",
+      title: "KCS - Courier Service",
+      text: "Logistics and Courier Service website <br/> with tracking and delivery options. (React.JS)",
+      img: img7,
+      link: "https://khizar-courier-service-kcs.vercel.app/",
     },
     {
       title: "Offline Api's Handling",
-      text: "Offline handling of Api's using <br/> Arrays and Local Storage.",
+      text: "Offline handling of Api's using <br/> Arrays and Local Storage. (React.JS)",
       img: img8,
       link: "https://offline-handling-of-apis.vercel.app/",
     },
@@ -119,7 +120,7 @@ export default function Services() {
     },
     {
       title: "Card Routing",
-      text: "Route to next page with previous and next <br/> buttons with specific number of cards <br/> showing on one page using React Router.",
+      text: "Route to next page with previous and next <br/> buttons with specific number of cards <br/> showing on one page (React.JS)",
       img: img12,
       link: "https://show-cards-by-routing.vercel.app/",
     },

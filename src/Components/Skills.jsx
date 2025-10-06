@@ -2,7 +2,7 @@ import React from "react";
 import { FaHtml5, FaCss3Alt, FaReact, FaBootstrap } from "react-icons/fa";
 import { AiOutlineJavaScript } from "react-icons/ai";
 import { RiTailwindCssFill } from "react-icons/ri";
-import profileImage from "../assets/logo.jpg";
+import profileImage from "../assets/hire-logo.jpg";
 
 export default function SkillsSection() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../assets/logo.jpg";
+import Logo from "../assets/nav-logo.jpg";
 import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Navbar() {
