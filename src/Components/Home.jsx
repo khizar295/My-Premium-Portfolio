@@ -12,9 +12,9 @@ export default function Home() {
           I Have Design Experience
         </h1>
         <p className="text-[21px] font-[470] mt-2">
-          I design and develop services for customers of all sizes,
-          specializing <br /> in creating stylish, modern websites, web
-          services and online stores.
+          I design and develop solutions for clients of all sizes, <br />
+          specializing in crafting stylish, modern websites, <br /> web
+          applications, and online stores.
         </p>
         <button className="bg-[rgb(84,84,231)] border-2 border-black font-bold text-white h-[60px] w-[130px] mt-6 hover:bg-black hover:text-white transition-colors duration-500">
           Let's Talk

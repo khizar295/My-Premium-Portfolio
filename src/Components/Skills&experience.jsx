@@ -11,9 +11,9 @@ export default function Skillsexperience() {
           Skills and Experience
         </h1>
         <p className="mt-[20px] text-[18px] leading-[1.6] text-[#444] sm:text-left md:text-left">
-          I design and develop services for customers of all sizes, <br />
-          specializing in creating stylish, modern websites, web services <br />
-          and online stores.
+          I design and build digital experiences for businesses of all <br /> sizes,
+          specializing in crafting elegant, modern websites, web <br /> solutions
+          and professional online stores.
         </p>
       </div>
 

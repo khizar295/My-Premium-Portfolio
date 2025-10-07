@@ -6,9 +6,9 @@ import { FiTriangle } from "react-icons/fi";
 export default function Services() {
   return (
     <div className="w-full h-auto p-3 bg-[blanchedalmond] overflow-x-hidden mt-15">
-       <button className=" text-black font-bold px-6 py-2 border-2 border-black transform rotate-[-13deg] transition-all duration-300 hover:bg-black/20 active:scale-95">
-          Services
-        </button>
+      <button className=" text-black font-bold px-6 py-2 border-2 border-black transform rotate-[-13deg] transition-all duration-300 hover:bg-black/20 active:scale-95">
+        Services
+      </button>
       <div className="row">
         <h1 className="ml-[25px] text-[60px] font-[650] pt-7">
           Services I Offer
@@ -20,20 +20,20 @@ export default function Services() {
           <h1 className="text-[60px] font-[700]">01</h1>
           <h4 className="font-[650]">Website design</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
-            Dignissimos velit at cum <br /> illum accusantium deserunt fuga
-            corrupti <br /> voluptates.
+            I create visually appealing, user-friendly, and <br /> fully
+            responsive website designs that <br /> combine modern aesthetics
+            with seamless <br /> functionality to enhance user experience.
           </p>
-          <CiMobile2 className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px]" />
+          <CiMobile2 className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px] mt-10" />
         </div>
 
         <div className="bg-white m-2 p-[35px] border-2 border-black transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
           <h1 className="text-[60px] font-[700]">02</h1>
           <h4 className="font-[650]">Website Development</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
-            Dignissimos velit at cum <br /> illum accusantium deserunt fuga
-            corrupti odit <br /> voluptates.
+            I build high-performance, secure, and <br /> scalable websites using
+            modern <br /> technologies, ensuring smooth functionality, <br />{" "}
+            fast loading speeds, and seamless user experience.
           </p>
           <CiLaptop className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px]" />
         </div>
@@ -42,44 +42,44 @@ export default function Services() {
           <h1 className="text-[60px] font-[700]">03</h1>
           <h4 className="font-[650]">Pixel Perfect Elements</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
-            Dignissimos velit at cum <br /> illum accusantium deserunt fuga
-            corrupti <br /> voluptates.
+            I design every interface with precision and <br /> attention to
+            detail, ensuring each element <br /> aligns flawlessly for a clean,
+            consistent, <br /> and professional visual experience.
           </p>
-          <FiTriangle className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px]" />
+          <FiTriangle className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px] mt-10" />
         </div>
 
         <div className="bg-white m-2 p-[35px] border-2 border-black transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
           <h1 className="text-[60px] font-[700]">04</h1>
           <h4 className="font-[650]">Responsiveness</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
-            Dignissimos velit at cum <br /> illum accusantium deserunt fuga
-            corrupti <br /> voluptates.
+            I ensure every website adapts seamlessly <br /> to all screen sizes
+            and devices, <br /> providing an optimal viewing experience <br />{" "}
+            with smooth performance everywhere.
           </p>
-          <SiAffinitydesigner className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px]" />
+          <SiAffinitydesigner className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px] mt-10" />
         </div>
 
         <div className="bg-white m-2 p-[35px] border-2 border-black transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
           <h1 className="text-[60px] font-[700]">05</h1>
           <h4 className="font-[650]">UI/UX Design</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
-            Dignissimos velit at cum <br /> illum accusantium deserunt fuga
-            corrupti odit <br /> voluptates.
+            I craft intuitive and engaging user interfaces <br /> that
+            prioritize usability and aesthetics, <br /> delivering smooth
+            navigation and <br /> meaningful user experiences.
           </p>
-          <CiRouter className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px]" />
+          <CiRouter className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px] mt-10" />
         </div>
 
         <div className="bg-white m-2 p-[35px] border-2 border-black transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
           <h1 className="text-[60px] font-[700]">06</h1>
           <h4 className="font-[650]">Logic into Reality</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
-            Dignissimos velit at cum <br /> illum accusantium deserunt fuga
-            corrupti <br /> voluptates.
+            I transform creative ideas and complex <br /> concepts into
+            functional digital solutions, <br /> blending innovation with
+            precision to <br /> bring every vision to life.
           </p>
-          <CiGlobe className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px]" />
+          <CiGlobe className="h-[70px] w-[70px] bg-orange-500 rounded-full p-[15px] mt-11" />
         </div>
       </div>
     </div>

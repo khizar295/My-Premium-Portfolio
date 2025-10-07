@@ -4,8 +4,8 @@ body {
 }
 @media (max-width: 425px) {
   .navbar-logo {
-    height: 45px !important;
-    width: 45px !important;
+    height: 25px !important;
+    width: 25px !important;
     border-width: 1px !important;
   }
   .home-container {
@@ -49,11 +49,14 @@ body {
 }
 
 @media (max-width: 768px) {
-  .navbar-logo {
-    height: 30px !important;
-    width: 30px !important;
-    border-width: 1.5px !important;
-  }
+ .navbar-logo {
+  height: 35px !important;
+  width: 35px !important;
+  border-width: 2px !important;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
   .home-container {
     margin-top: 100px !important;
     flex-direction: column !important;
