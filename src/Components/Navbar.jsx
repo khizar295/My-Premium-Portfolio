@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/nav-logo.jpg";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -7,6 +8,13 @@ export default function Navbar() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  const handleScrollTo = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,41 +31,71 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Navbar */}
       <nav className="fixed top-0 left-0 flex justify-between items-center px-[35px] pt-[10px] pb-0 border-b-2 border-black h-[15vh] w-full bg-white z-50">
-        {/* Logo */}
         <div className="flex items-center">
           <img
             src={Logo}
             alt="Logo"
             className="navbar-logo w-[45px] h-[45px] border-2 border-black rounded-full object-cover"
           />
-
           <h1 className="mt-[2px] ml-[5px] font-normal">Khizar</h1>
         </div>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex mt-[15px]">
-          {["HOME", "SERVICES", "SKILLS", "PORTFOLIO", "CONTACT"].map(
-            (item, idx) => (
-              <li
-                key={idx}
-                className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500"
-              >
-                <a href="#" className="no-underline text-black font-bold">
-                  {item}
-                </a>
-              </li>
-            )
-          )}
+          <li
+            id="nav-home"
+            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
+            onClick={() => handleScrollTo("home")}
+          >
+            <span className="no-underline text-black font-bold">HOME</span>
+          </li>
+          <li
+            id="nav-services"
+            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
+            onClick={() => handleScrollTo("services")}
+          >
+            <span className="no-underline text-black font-bold">SERVICES</span>
+          </li>
+          <li
+            id="nav-experience"
+            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
+            onClick={() => handleScrollTo("experience")}
+          >
+            <span className="no-underline text-black font-bold">
+              EXPERIENCE
+            </span>
+          </li>
+          <li
+            id="nav-skills"
+            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
+            onClick={() => handleScrollTo("skills")}
+          >
+            <span className="no-underline text-black font-bold">SKILLS</span>
+          </li>
+          <li
+            id="nav-portfolio"
+            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
+            onClick={() => handleScrollTo("portfolio")}
+          >
+            <span className="no-underline text-black font-bold">PORTFOLIO</span>
+          </li>
+          <li
+            id="nav-contact"
+            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
+            onClick={() => handleScrollTo("contact")}
+          >
+            <span className="no-underline text-black font-bold">CONTACT</span>
+          </li>
         </ul>
 
-        {/* Contact Button */}
-        <button className="hidden md:block bg-orange-500 h-[70%] w-[150px] border-2 border-black font-bold hover:bg-black hover:text-white transition-colors duration-500">
+        <Link
+          to="/contactpage"
+          onClick={() => handleScrollTo("contact")}
+          className="hidden md:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none"
+        >
           Contact Now
-        </button>
+        </Link>
 
-        {/* Mobile Toggle Button */}
         <div
           className={`md:hidden cursor-pointer transition-transform duration-500 ${
             isOpen ? "rotate-180" : "rotate-0"
@@ -72,50 +110,66 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Scroll Progress Bar */}
       <div
         className="fixed top-[15vh] left-0 h-[3px] bg-orange-500 z-50 transition-all duration-75"
         style={{ width: `${scrollProgress}%` }}
       ></div>
 
-      {/* Mobile Menu */}
       <div
         className={`fixed left-0 w-full bg-white border-t-2 border-black flex flex-col items-center py-6 md:hidden z-40 transition-all duration-500 ease-in-out ${
           isOpen
             ? "top-[15vh] opacity-100 translate-y-0"
             : "top-[15vh] opacity-0 -translate-y-10 pointer-events-none"
         }`}
-        style={{
-          position: "fixed",
-          height: "auto",
-          overflowY: "hidden",
-        }}
       >
         <ul className="flex flex-col items-center space-y-4">
-          {["HOME", "SERVICES", "SKILLS", "PORTFOLIO", "CONTACT"].map(
-            (item, idx) => (
-              <li
-                key={idx}
-                className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300"
-              >
-                <a
-                  href="#"
-                  className="no-underline text-black font-bold"
-                  onClick={toggleMenu}
-                >
-                  {item}
-                </a>
-              </li>
-            )
-          )}
+          <li
+            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
+            onClick={() => handleScrollTo("home")}
+          >
+            <span className="no-underline text-black font-bold">HOME</span>
+          </li>
+          <li
+            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
+            onClick={() => handleScrollTo("services")}
+          >
+            <span className="no-underline text-black font-bold">SERVICES</span>
+          </li>
+          <li
+            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
+            onClick={() => handleScrollTo("experience")}
+          >
+            <span className="no-underline text-black font-bold">
+              EXPERIENCE
+            </span>
+          </li>
+          <li
+            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
+            onClick={() => handleScrollTo("skills")}
+          >
+            <span className="no-underline text-black font-bold">SKILLS</span>
+          </li>
+          <li
+            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
+            onClick={() => handleScrollTo("portfolio")}
+          >
+            <span className="no-underline text-black font-bold">PORTFOLIO</span>
+          </li>
+          <li
+            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
+            onClick={() => handleScrollTo("contact")}
+          >
+            <span className="no-underline text-black font-bold">CONTACT</span>
+          </li>
         </ul>
 
-        <button
-          className="mt-6 bg-orange-500 h-[70px] w-[150px] border-2 border-black font-bold hover:bg-black hover:text-white transition-colors duration-500"
-          onClick={toggleMenu}
+        <Link
+          to="/contactpage"
+          onClick={() => handleScrollTo("contact")}
+          className="hidden md:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none"
         >
           Contact Now
-        </button>
+        </Link>
       </div>
     </>
   );

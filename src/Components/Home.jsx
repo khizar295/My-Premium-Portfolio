@@ -3,7 +3,7 @@ import Logo from "../assets/logo.jpg";
 
 export default function Home() {
   return (
-    <div className="mt-[200px] flex flex-col md:flex-row w-full h-auto items-center justify-center home-container">
+    <div id="home" className="mt-[200px] flex flex-col md:flex-row w-full h-auto items-center justify-center home-container">
       <div className="mt-[45px] text-section">
         <button className=" text-black font-bold px-6 py-2 border-2 border-black transform rotate-[-13deg] transition-all duration-300 hover:bg-black/20 active:scale-95">
           Hello

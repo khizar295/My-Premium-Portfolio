@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter, Router, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import './App.css'
@@ -14,12 +15,14 @@ export default function App() {
 
   return (
     <>
+      <BrowserRouter>
       <Navbar />
       <Home />
       <Services/>
       <SkillsExperience />
       <SkillsSection/>
       <Portfolio/>
+      </BrowserRouter>
     </>
   )
 }

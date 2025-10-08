@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Skillsexperience() {
   return (
-    <div className="flex flex-col lg:flex-row items-start p-[30px] font-sans">
+    <div id="experience" className="flex flex-col lg:flex-row items-start p-[30px] font-sans">
       <div className="flex-1 mt-[150px] sm:mt-[50px] sm:ml-[110px] md:mt-[50px] md:ml-[110px]">
         <button className=" text-black font-bold px-6 py-2 border-2 border-black transform rotate-[-13deg] transition-all duration-300 hover:bg-black/20 active:scale-95">
           Experience

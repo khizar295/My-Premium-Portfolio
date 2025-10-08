@@ -6,7 +6,7 @@ import profileImage from "../assets/hire-logo.jpg";
 
 export default function SkillsSection() {
   return (
-    <div className="my-10 container mx-auto px-4">
+    <div id="skills" className="my-10 container mx-auto px-4">
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10">
         <div className="w-full lg:w-2/3">
           <h2 className="text-2xl font-bold mb-6">My Skills</h2>
