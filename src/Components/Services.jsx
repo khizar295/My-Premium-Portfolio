@@ -5,12 +5,12 @@ import { FiTriangle } from "react-icons/fi";
 
 export default function Services() {
   return (
-    <div id="services" className="w-full h-auto p-3 bg-[blanchedalmond] overflow-x-hidden mt-15">
-      <button className=" text-black font-bold px-6 py-2 border-2 border-black transform rotate-[-13deg] transition-all duration-300 hover:bg-black/20 active:scale-95">
-        Services
-      </button>
+    <div id="services" className="w-full h-auto p-3 bg-[blanchedalmond] overflow-x-hidden mt-15 p-4">
+      <button className="relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
+          Services
+        </button>
       <div className="row">
-        <h1 className="ml-[25px] text-[60px] font-[650] pt-7">
+        <h1 className="text-[60px] font-[650] pt-7">
           Services I Offer
         </h1>
       </div>

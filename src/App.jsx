@@ -10,6 +10,7 @@ import Services from './Components/Services'
 import SkillsExperience from './Components/Skills&experience'
 import SkillsSection from './Components/Skills'
 import Portfolio from './Components/Portfolio'
+import Testinomials from './Components/Testinomials'
 
 export default function App() {
 
@@ -22,6 +23,7 @@ export default function App() {
       <SkillsExperience />
       <SkillsSection/>
       <Portfolio/>
+      <Testinomials/>
       </BrowserRouter>
     </>
   )

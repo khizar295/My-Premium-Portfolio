@@ -25,7 +25,7 @@ export default function Services() {
   };
 
   const ServiceCard = ({ title, text, img, link }) => (
-    <div className="bg-white m-2 border-2 border-black flex flex-col items-center w-full sm:w-auto transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
+    <div className="portfolio-box bg-white m-2 border-2 border-black flex flex-col items-center w-full sm:w-auto transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
       <img
         src={img}
         alt={title}
@@ -134,13 +134,13 @@ export default function Services() {
   );
 
   return (
-    <div id="portfolio" className="w-full h-auto p-3 bg-[blanchedalmond] overflow-x-hidden mt-15 relative">
-      <button className="text-black font-bold px-6 py-2 border-2 border-black transform rotate-[-13deg] transition-all duration-300 hover:bg-black/20 active:scale-95">
-        Portfolio
-      </button>
+    <div id="portfolio" className="w-full h-auto p-3 bg-[blanchedalmond] overflow-x-hidden mt-15 relative p-4">
+      <button className="relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
+          Portfolio
+        </button>
 
       <div className="row">
-        <h1 className="ml-[25px] text-[60px] font-[650] pt-7">
+        <h1 className="text-[60px] font-[650] pt-7">
           Latest Projects
         </h1>
       </div>

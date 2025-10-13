@@ -3,11 +3,15 @@ import Logo from "../assets/logo.jpg";
 
 export default function Home() {
   return (
-    <div id="home" className="mt-[200px] flex flex-col md:flex-row w-full h-auto items-center justify-center home-container">
+    <div
+      id="home"
+      className="mt-[200px] flex flex-col md:flex-row w-full h-auto items-center justify-center home-container"
+    >
       <div className="mt-[45px] text-section">
-        <button className=" text-black font-bold px-6 py-2 border-2 border-black transform rotate-[-13deg] transition-all duration-300 hover:bg-black/20 active:scale-95">
+        <button className="relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
           Hello
         </button>
+
         <h1 className="text-[70px] font-[650] leading-tight mt-[50px] inline-block">
           I Have Design Experience
         </h1>

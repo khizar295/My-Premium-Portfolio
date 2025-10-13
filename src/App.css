@@ -45,6 +45,14 @@ body {
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
+  .portfolio-box{
+    margin: 0px !important;
+    margin-top: 15px !important;
+  }
+  /* .test-icon{
+    margin-left: 115px !important;
+    margin-top: 120px;
+  } */
   
 }
 
@@ -93,5 +101,8 @@ body {
     width: 150px !important;
     height: 150px !important;
   }
-   
+  .test-icon{
+    margin-left: 123px !important;
+    margin-top: 130px;
+  }
 }
