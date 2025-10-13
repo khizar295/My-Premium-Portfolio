@@ -2,6 +2,33 @@ body {
   margin: 0px;
   padding: 0px;
 }
+.contact-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+.input-error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.contact-sections {
+  display: flex;
+  gap: 40px;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+}
+.contact-right {
+  max-width: 100%;
+}
+
+.contact-right .flex {
+  flex-wrap: wrap;
+}
 @media (max-width: 425px) {
   .navbar-logo {
     height: 25px !important;
@@ -40,30 +67,25 @@ body {
     margin-top: 8px;
     display: block;
   }
-  .project-img{
+  .project-img {
     width: 100% !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
-  .portfolio-box{
+  .portfolio-box {
     margin: 0px !important;
     margin-top: 15px !important;
   }
-  /* .test-icon{
-    margin-left: 115px !important;
-    margin-top: 120px;
-  } */
-  
 }
 
 @media (max-width: 768px) {
- .navbar-logo {
-  height: 35px !important;
-  width: 35px !important;
-  border-width: 2px !important;
-  border-radius: 50%;
-  object-fit: cover;
-}
+  .navbar-logo {
+    height: 35px !important;
+    width: 35px !important;
+    border-width: 2px !important;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
   .home-container {
     margin-top: 100px !important;
@@ -101,8 +123,50 @@ body {
     width: 150px !important;
     height: 150px !important;
   }
-  .test-icon{
+  .test-icon {
     margin-left: 123px !important;
     margin-top: 130px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .contact-sections {
+    flex-direction: column;
+  }
+  .contact-right .ml-50 {
+    margin-left: 0 !important;
+  }
+
+  .contact-right hr {
+    width: 100% !important;
+  }
+  .contact-right img {
+    width: 70% !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-right {
+    padding: 2rem !important;
+  }
+
+  .contact-right .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-right hr {
+    width: 100% !important;
+  }
+
+  .contact-right div > div {
+    margin-top: 0.5rem;
+  }
+  .contact-right img {
+    width: 100% !important;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

@@ -11,6 +11,7 @@ import SkillsExperience from './Components/Skills&experience'
 import SkillsSection from './Components/Skills'
 import Portfolio from './Components/Portfolio'
 import Testinomials from './Components/Testinomials'
+import Contact from './Components/Contact'
 
 export default function App() {
 
@@ -24,6 +25,7 @@ export default function App() {
       <SkillsSection/>
       <Portfolio/>
       <Testinomials/>
+      <Contact/>
       </BrowserRouter>
     </>
   )
