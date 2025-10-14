@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Skillsexperience() {
   return (
-    <div id="experience" className="flex flex-col lg:flex-row items-start p-[30px] font-sans">
+    <div
+      id="experience"
+      className="flex flex-col lg:flex-row items-start p-[30px] font-sans"
+    >
       <div className="flex-1 mt-[150px] sm:mt-[50px] sm:ml-[110px] md:mt-[50px] md:ml-[110px]">
         <button className="relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
           Experience
@@ -11,9 +14,9 @@ export default function Skillsexperience() {
           Skills and Experience
         </h1>
         <p className="mt-[20px] text-[18px] leading-[1.6] text-[#444] sm:text-left md:text-left">
-          I design and build digital experiences for businesses of all <br /> sizes,
-          specializing in crafting elegant, modern websites, web <br /> solutions
-          and professional online stores.
+          I design and build digital experiences for businesses of all <br />{" "}
+          sizes, specializing in crafting elegant, modern websites, web <br />{" "}
+          solutions and professional online stores.
         </p>
       </div>
 

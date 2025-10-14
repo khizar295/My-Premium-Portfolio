@@ -29,6 +29,7 @@ body {
 .contact-right .flex {
   flex-wrap: wrap;
 }
+
 @media (max-width: 425px) {
   .navbar-logo {
     height: 25px !important;
@@ -126,6 +127,11 @@ body {
   .test-icon {
     margin-left: 123px !important;
     margin-top: 130px;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
   }
 }
 @media screen and (max-width: 992px) {

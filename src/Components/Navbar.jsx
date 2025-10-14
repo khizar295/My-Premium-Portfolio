@@ -1,37 +1,53 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Logo from "../assets/nav-logo.jpg";
+import { Link, useLocation } from "react-router-dom";
+import Logo from "../assets/nav-logo.png";
 import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const location = useLocation();
+  const [activeSection, setActiveSection] = useState("home");
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
   const handleScrollTo = (id) => {
     const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+    setActiveSection(id);
     setIsOpen(false);
   };
 
   useEffect(() => {
     const handleScroll = () => {
+      const sections = [
+        "home",
+        "services",
+        "experience",
+        "skills",
+        "portfolio",
+        "contact",
+      ];
+      let current = "home";
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 150) current = id;
+      });
+      setActiveSection(current);
+
       const scrollTop = window.scrollY;
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
       const scrolled = (scrollTop / docHeight) * 100;
       setScrollProgress(scrolled);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      <nav className="fixed top-0 left-0 flex justify-between items-center px-[35px] pt-[10px] pb-0 border-b-2 border-black h-[15vh] w-full bg-white z-50">
+      <nav className="fixed top-0 left-0 flex justify-between items-center px-[35px] pt-[5px] pb-0 border-b-2 border-black h-[15vh] w-full bg-white z-50">
         <div className="flex items-center">
           <img
             src={Logo}
@@ -42,50 +58,29 @@ export default function Navbar() {
         </div>
 
         <ul className="hidden md:flex mt-[15px]">
-          <li
-            id="nav-home"
-            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
-            onClick={() => handleScrollTo("home")}
-          >
-            <span className="no-underline text-black font-bold">HOME</span>
-          </li>
-          <li
-            id="nav-services"
-            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
-            onClick={() => handleScrollTo("services")}
-          >
-            <span className="no-underline text-black font-bold">SERVICES</span>
-          </li>
-          <li
-            id="nav-experience"
-            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
-            onClick={() => handleScrollTo("experience")}
-          >
-            <span className="no-underline text-black font-bold">
-              EXPERIENCE
-            </span>
-          </li>
-          <li
-            id="nav-skills"
-            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
-            onClick={() => handleScrollTo("skills")}
-          >
-            <span className="no-underline text-black font-bold">SKILLS</span>
-          </li>
-          <li
-            id="nav-portfolio"
-            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
-            onClick={() => handleScrollTo("portfolio")}
-          >
-            <span className="no-underline text-black font-bold">PORTFOLIO</span>
-          </li>
-          <li
-            id="nav-contact"
-            className="inline list-none px-[20px] py-[8px] hover:bg-orange-500 rounded-[20px] transition-colors duration-500 cursor-pointer"
-            onClick={() => handleScrollTo("contact")}
-          >
-            <span className="no-underline text-black font-bold">CONTACT</span>
-          </li>
+          {[
+            { id: "home", label: "HOME" },
+            { id: "services", label: "SERVICES" },
+            { id: "experience", label: "EXPERIENCE" },
+            { id: "skills", label: "SKILLS" },
+            { id: "portfolio", label: "PORTFOLIO" },
+            { id: "contact", label: "CONTACT" },
+          ].map((item) => (
+            <li
+              key={item.id}
+              id={`nav-${item.id}`}
+              className={`inline list-none mt-3 px-[20px] py-[5px] rounded-[20px] transition-colors duration-500 cursor-pointer ${
+                activeSection === item.id
+                  ? "bg-orange-500"
+                  : "hover:bg-orange-500"
+              }`}
+              onClick={() => handleScrollTo(item.id)}
+            >
+              <span className="no-underline text-black font-bold">
+                {item.label}
+              </span>
+            </li>
+          ))}
         </ul>
 
         <Link
@@ -123,44 +118,28 @@ export default function Navbar() {
         }`}
       >
         <ul className="flex flex-col items-center space-y-4">
-          <li
-            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
-            onClick={() => handleScrollTo("home")}
-          >
-            <span className="no-underline text-black font-bold">HOME</span>
-          </li>
-          <li
-            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
-            onClick={() => handleScrollTo("services")}
-          >
-            <span className="no-underline text-black font-bold">SERVICES</span>
-          </li>
-          <li
-            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
-            onClick={() => handleScrollTo("experience")}
-          >
-            <span className="no-underline text-black font-bold">
-              EXPERIENCE
-            </span>
-          </li>
-          <li
-            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
-            onClick={() => handleScrollTo("skills")}
-          >
-            <span className="no-underline text-black font-bold">SKILLS</span>
-          </li>
-          <li
-            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
-            onClick={() => handleScrollTo("portfolio")}
-          >
-            <span className="no-underline text-black font-bold">PORTFOLIO</span>
-          </li>
-          <li
-            className="list-none px-[20px] py-[8px] hover:bg-orange-500 hover:rounded-[20px] transition-all duration-300 cursor-pointer"
-            onClick={() => handleScrollTo("contact")}
-          >
-            <span className="no-underline text-black font-bold">CONTACT</span>
-          </li>
+          {[
+            { id: "home", label: "HOME" },
+            { id: "services", label: "SERVICES" },
+            { id: "experience", label: "EXPERIENCE" },
+            { id: "skills", label: "SKILLS" },
+            { id: "portfolio", label: "PORTFOLIO" },
+            { id: "contact", label: "CONTACT" },
+          ].map((item) => (
+            <li
+              key={item.id}
+              className={`list-none px-[20px] py-[8px] hover:rounded-[20px] transition-all duration-300 cursor-pointer ${
+                activeSection === item.id
+                  ? "bg-orange-500 rounded-[20px]"
+                  : "hover:bg-orange-500"
+              }`}
+              onClick={() => handleScrollTo(item.id)}
+            >
+              <span className="no-underline text-black font-bold">
+                {item.label}
+              </span>
+            </li>
+          ))}
         </ul>
 
         <Link

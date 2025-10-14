@@ -134,15 +134,16 @@ export default function Services() {
   );
 
   return (
-    <div id="portfolio" className="w-full h-auto p-3 bg-[blanchedalmond] overflow-x-hidden mt-15 relative p-4">
+    <div
+      id="portfolio"
+      className="w-full h-auto p-3 bg-[blanchedalmond] overflow-x-hidden mt-15 relative p-4"
+    >
       <button className="relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
-          Portfolio
-        </button>
+        Portfolio
+      </button>
 
       <div className="row">
-        <h1 className="text-[60px] font-[650] pt-7">
-          Latest Projects
-        </h1>
+        <h1 className="text-[60px] font-[650] pt-7">Latest Projects</h1>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-around mt-3 transition-all duration-700 ease-in-out">

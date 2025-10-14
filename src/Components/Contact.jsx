@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import contactImage from '../assets/contact-image.jpg';
+import contactImage from "../assets/contact-image.jpg";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -39,7 +39,10 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className="w-full mt-15 overflow-x-hidden p-5 bg-[blanchedalmond]">
+    <div
+      id="contact"
+      className="w-full mt-15 overflow-x-hidden p-3 bg-[blanchedalmond]"
+    >
       <button className="relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
         Contact
       </button>
@@ -120,7 +123,6 @@ export default function Contact() {
         </div>
 
         <div className="contact-right p-6 rounded-xl flex flex-col items-start">
-
           <div className="flex items-start mb-2 ml-50">
             <FaPhoneAlt
               className="text-white mr-3 mt-2 bg-blue-800 p-2 rounded-3xl"
@@ -157,7 +159,11 @@ export default function Contact() {
           </div>
           <hr className="w-[50%] mb-3 self-end border-4 border-black" />
 
-          <img src={contactImage} alt="Studio" className="mt-4 rounded-xl w-[50%] ml-60 hover:scale-105 transition-scale duration-500 cursor-pointer shadow-lg" />
+          <img
+            src={contactImage}
+            alt="Studio"
+            className="mt-4 rounded-xl w-[50%] ml-60 hover:scale-105 transition-scale duration-500 cursor-pointer shadow-lg"
+          />
         </div>
       </div>
     </div>
