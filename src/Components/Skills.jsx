@@ -9,36 +9,36 @@ export default function SkillsSection() {
     <div id="skills" className="my-10 container mx-auto px-4">
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10">
         <div className="w-full lg:w-2/3">
-          <h2 className="text-2xl font-bold mb-6">My Skills</h2>
+          <h2 className="text-2xl font-bold mb-6 montserrat">My Skills</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="skill-card flex items-center border p-3 rounded">
               <FaHtml5 size={40} color="#5A4FCF" />
-              <span className="ml-3 font-semibold">HTML 5</span>
+              <span className="ml-3 font-semibold montserrat2">HTML 5</span>
             </div>
 
             <div className="skill-card flex items-center border p-3 rounded">
               <FaCss3Alt size={40} color="#5A4FCF" />
-              <span className="ml-3 font-semibold">CSS 3</span>
+              <span className="ml-3 font-semibold montserrat2">CSS 3</span>
             </div>
 
             <div className="skill-card flex items-center border p-3 rounded">
               <AiOutlineJavaScript size={40} color="#5A4FCF" />
-              <span className="ml-3 font-semibold">JavaScript</span>
+              <span className="ml-3 font-semibold montserrat2">JavaScript</span>
             </div>
 
             <div className="skill-card flex items-center border p-3 rounded">
               <FaReact size={40} color="#5A4FCF" />
-              <span className="ml-3 font-semibold">React JS</span>
+              <span className="ml-3 font-semibold montserrat2">React JS</span>
             </div>
 
             <div className="skill-card flex items-center border p-3 rounded">
               <FaBootstrap size={40} color="#5A4FCF" />
-              <span className="ml-3 font-semibold">Bootstrap 5</span>
+              <span className="ml-3 font-semibold montserrat2">Bootstrap 5</span>
             </div>
 
             <div className="skill-card flex items-center border p-3 rounded">
               <RiTailwindCssFill size={40} color="#5A4FCF" />
-              <span className="ml-3 font-semibold">Tailwind CSS</span>
+              <span className="ml-3 font-semibold montserrat2">Tailwind CSS</span>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function SkillsSection() {
             alt="profile"
             className="rounded-full mb-4 w-48 h-48 object-cover transform transition-transform duration-300 hover:scale-105"
           />
-          <button className="bg-orange-500 hover:bg-orange-400 text-black font-bold px-6 py-2 border-2 border-black">
+          <button className="montserrat bg-orange-500 hover:bg-orange-400 text-black font-bold px-6 py-2 border-2 border-black">
             Hire me
           </button>
         </div>

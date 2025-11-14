@@ -54,7 +54,7 @@ export default function Navbar() {
             alt="Logo"
             className="navbar-logo w-[45px] h-[45px] border-2 border-black rounded-full object-cover"
           />
-          <h1 className="mt-[2px] ml-[5px] font-normal">Khizar</h1>
+          <h1 className="montserrat mt-[2px] ml-[5px] font-normal">Khizar</h1>
         </div>
 
         <ul className="hidden md:flex mt-[15px]">
@@ -69,7 +69,7 @@ export default function Navbar() {
             <li
               key={item.id}
               id={`nav-${item.id}`}
-              className={`inline list-none mt-3 px-[20px] py-[5px] rounded-[20px] transition-colors duration-500 cursor-pointer ${
+              className={`montserrat inline list-none mt-3 px-[20px] py-[5px] rounded-[20px] transition-colors duration-500 cursor-pointer ${
                 activeSection === item.id
                   ? "bg-orange-500"
                   : "hover:bg-orange-500"
@@ -86,7 +86,7 @@ export default function Navbar() {
         <Link
           to="/contactpage"
           onClick={() => handleScrollTo("contact")}
-          className="hidden md:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none"
+          className="montserrat hidden md:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none"
         >
           Contact Now
         </Link>
@@ -128,7 +128,7 @@ export default function Navbar() {
           ].map((item) => (
             <li
               key={item.id}
-              className={`list-none px-[20px] py-[8px] hover:rounded-[20px] transition-all duration-300 cursor-pointer ${
+              className={`montserrat list-none px-[20px] py-[8px] hover:rounded-[20px] transition-all duration-300 cursor-pointer ${
                 activeSection === item.id
                   ? "bg-orange-500 rounded-[20px]"
                   : "hover:bg-orange-500"
@@ -145,7 +145,7 @@ export default function Navbar() {
         <Link
           to="/contactpage"
           onClick={() => handleScrollTo("contact")}
-          className="hidden md:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none"
+          className="montserrat hidden md:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none"
         >
           Contact Now
         </Link>

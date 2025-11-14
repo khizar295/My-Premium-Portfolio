@@ -30,11 +30,11 @@ export default function Testinomials() {
   ];
   return (
     <div className="w-full mt-15 overflow-x-hidden p-3">
-      <button className="relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
+      <button className="montserrat relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
         Testinomial
       </button>
       <div className="row">
-        <h1 className="text-[60px] font-[650] pt-7">Client's Kind Word</h1>
+        <h1 className="text-[60px] font-[650] pt-7 montserrat">Client's Kind Word</h1>
       </div>
       <div className="row">
         {array.map((item, index) => (
@@ -52,9 +52,9 @@ export default function Testinomials() {
                 <FaQuoteLeft />
               </div>
               <div className="card-body">
-                <p className="card-text">{item.feedback}</p>
-                <h5 className="card-title mt-3">{item.name}</h5>
-                <p className="text-muted">{item.position}</p>
+                <p className="card-text lato-regular">{item.feedback}</p>
+                <h5 className="card-title mt-3 montserrat">{item.name}</h5>
+                <p className="text-muted lato-regular">{item.position}</p>
               </div>
             </div>
           </div>

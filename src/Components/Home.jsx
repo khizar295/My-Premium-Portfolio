@@ -8,19 +8,19 @@ export default function Home() {
       className="mt-[200px] flex flex-col md:flex-row w-full h-auto items-center justify-center home-container"
     >
       <div className="mt-[45px] text-section">
-        <button className="relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
+        <button className="montserrat relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
           Hello
         </button>
 
-        <h1 className="text-[70px] font-[650] leading-tight mt-[50px] inline-block">
+        <h1 className="montserrat text-[70px] font-[650] leading-tight mt-[50px] inline-block">
           I Have Design Experience
         </h1>
-        <p className="text-[21px] font-[470] mt-2">
+        <p className="text-[21px] font-[470] mt-2 lato-regular">
           I design and develop solutions for clients of all sizes, <br />
           specializing in crafting stylish, modern websites, <br /> web
           applications, and online stores.
         </p>
-        <button className="bg-[rgb(84,84,231)] border-2 border-black font-bold text-white h-[60px] w-[130px] mt-6 hover:bg-black hover:text-white transition-colors duration-500">
+        <button className="montserrat bg-[rgb(84,84,231)] border-2 border-black font-bold text-white h-[60px] w-[130px] mt-6 hover:bg-black hover:text-white transition-colors duration-500">
           Let's Talk
         </button>
       </div>
