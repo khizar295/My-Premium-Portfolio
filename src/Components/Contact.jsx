@@ -46,14 +46,19 @@ export default function Contact() {
       <button className="montserrat relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
         Contact
       </button>
+
       <div className="row">
-        <h1 className="text-[60px] font-[650] pt-7 montserrat">Let's Discuss Project</h1>
+        <h1 className="text-[60px] font-[650] pt-7 montserrat">
+          Let's Discuss Project
+        </h1>
       </div>
 
-      <div className="contact-sections mt-10">
-        <div className="contact-left bg-white p-7 border-3 border-black shadow-lg pt-14">
+      {/* Responsive Flex Container */}
+      <div className="flex flex-col lg:flex-row gap-6 mt-10">
+        {/* Left Box - Form */}
+        <div className="flex-1 bg-white p-7 border-3 border-black shadow-lg pt-14">
           <form onSubmit={handleSubmit} noValidate>
-            <div className="flex gap-4 mb-4">
+            <div className="flex flex-col md:flex-row gap-4 mb-4">
               <div className="flex-1">
                 <p className="font-bold text-gray-400 montserrat">First Name</p>
                 <input
@@ -122,8 +127,9 @@ export default function Contact() {
           </form>
         </div>
 
-        <div className="contact-right p-6 rounded-xl flex flex-col items-start">
-          <div className="flex items-start mb-2 ml-50">
+        {/* Right Box - Info */}
+        <div className="flex-1 p-6 rounded-xl flex flex-col items-start">
+          <div className="flex items-start mb-4">
             <FaPhoneAlt
               className="text-white mr-3 mt-2 bg-blue-800 p-2 rounded-3xl"
               size={45}
@@ -133,37 +139,42 @@ export default function Contact() {
               <div className="font-semibold lato-regular">+92 302 0549 259</div>
             </div>
           </div>
-          <hr className="w-[50%] mb-3 self-end border-4 border-black" />
+          <hr className="w-full mb-3 border-4 border-black" />
 
-          <div className="flex items-start mb-3 ml-50">
+          <div className="flex items-start mb-4">
             <FaEnvelope
               className="text-white mr-3 mt-2 bg-blue-800 p-2 rounded-3xl"
               size={45}
             />
             <div>
               <div className="montserrat font-bold">Mail</div>
-              <div className="font-semibold lato-regular">khizarrehman45@gmail.com</div>
+              <div className="font-semibold lato-regular">
+                khizarrehman45@gmail.com
+              </div>
             </div>
           </div>
-          <hr className="w-[50%] mb-3 self-end border-4 border-black" />
+          <hr className="w-full mb-3 border-4 border-black" />
 
-          <div className="flex items-start mb-3 ml-50">
+          <div className="flex items-start mb-4">
             <FaMapMarkerAlt
               className="text-white mr-3 mt-2 bg-blue-800 p-2 rounded-3xl"
               size={45}
             />
             <div>
               <div className="montserrat font-bold">Visit my Studio</div>
-              <div className="font-semibold lato-regular">Lodhran, Punjab, Pakistan</div>
+              <div className="font-semibold lato-regular">
+                Lodhran, Punjab, Pakistan
+              </div>
             </div>
           </div>
-          <hr className="w-[50%] mb-3 self-end border-4 border-black" />
+          <hr className="w-full mb-3 border-4 border-black" />
 
-          <img
-            src={contactImage}
-            alt="Studio"
-            className="mt-4 rounded-xl w-[50%] ml-60 hover:scale-105 transition-scale duration-500 cursor-pointer shadow-lg"
-          />
+          <h1
+            style={{ objectFit: "cover", width: "80%", margin: "auto" }}
+            className="h-[100px] mt-4 rounded-xl w-full hover:scale-105 transition-transform duration-500 cursor-pointer shadow-lg text-center py-8 md:py-6 lg:py-5 bg-white lato-bold"
+          >
+            Contact Me
+          </h1>
         </div>
       </div>
     </div>

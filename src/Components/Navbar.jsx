@@ -57,7 +57,8 @@ export default function Navbar() {
           <h1 className="montserrat mt-[2px] ml-[5px] font-normal">Khizar</h1>
         </div>
 
-        <ul className="hidden md:flex mt-[15px]">
+        {/* Desktop menu only (lg and above) */}
+        <ul className="hidden lg:flex mt-[15px]">
           {[
             { id: "home", label: "HOME" },
             { id: "services", label: "SERVICES" },
@@ -83,16 +84,18 @@ export default function Navbar() {
           ))}
         </ul>
 
+        {/* Desktop Contact Now button only */}
         <Link
           to="/contactpage"
           onClick={() => handleScrollTo("contact")}
-          className="montserrat hidden md:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none"
+          className="montserrat hidden lg:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none"
         >
           Contact Now
         </Link>
 
+        {/* Hamburger menu for tablet and mobile */}
         <div
-          className={`md:hidden cursor-pointer transition-transform duration-500 ${
+          className={`lg:hidden cursor-pointer transition-transform duration-500 ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
           onClick={toggleMenu}
@@ -105,13 +108,15 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* Scroll progress bar */}
       <div
         className="fixed top-[15vh] left-0 h-[3px] bg-orange-500 z-50 transition-all duration-75"
         style={{ width: `${scrollProgress}%` }}
       ></div>
 
+      {/* Hamburger menu dropdown for tablet and mobile */}
       <div
-        className={`fixed left-0 w-full bg-white border-t-2 border-black flex flex-col items-center py-6 md:hidden z-40 transition-all duration-500 ease-in-out ${
+        className={`fixed left-0 w-full bg-white border-t-2 border-black flex flex-col items-center py-6 lg:hidden z-40 transition-all duration-500 ease-in-out ${
           isOpen
             ? "top-[15vh] opacity-100 translate-y-0"
             : "top-[15vh] opacity-0 -translate-y-10 pointer-events-none"
@@ -142,10 +147,11 @@ export default function Navbar() {
           ))}
         </ul>
 
+        {/* Hamburger menu Contact Now button (tablet & mobile) */}
         <Link
           to="/contactpage"
           onClick={() => handleScrollTo("contact")}
-          className="montserrat hidden md:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none"
+          className="montserrat flex lg:hidden items-center justify-center h-[80%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 ms-8 cursor-pointer text-decoration-none mt-4"
         >
           Contact Now
         </Link>
