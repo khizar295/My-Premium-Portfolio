@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+
 import img1 from "../assets/proj-1.png";
 import img2 from "../assets/proj-2.png";
 import img3 from "../assets/proj-3.png";
@@ -14,6 +16,7 @@ import img11 from "../assets/proj-11.png";
 import img12 from "../assets/proj-12.png";
 
 export default function Services() {
+  const navigate = useNavigate();
   const [page, setPage] = useState(1);
 
   const handleNext = () => {
@@ -24,7 +27,7 @@ export default function Services() {
     if (page > 1) setPage(page - 1);
   };
 
-  const ServiceCard = ({ title, text, img, link }) => (
+  const ServiceCard = ({ title, text, img, routeTo }) => (
     <div className="portfolio-box bg-white m-2 border-2 border-black flex flex-col items-center w-full sm:w-auto transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
       <img
         src={img}
@@ -39,14 +42,14 @@ export default function Services() {
             dangerouslySetInnerHTML={{ __html: text }}
           ></p>
         </div>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
+
+        {/* Arrow now navigates to a specific page */}
+        <button
+          onClick={() => navigate(routeTo)}
           className="bg-orange-600 text-black h-[50px] w-12 flex justify-center items-center text-xl rounded hover:bg-orange-500 transition-all duration-300"
         >
           <FiArrowRight className="text-3xl" />
-        </a>
+        </button>
       </div>
     </div>
   );
@@ -56,73 +59,73 @@ export default function Services() {
       title: "My Premium Portfolio",
       text: "Creative and responsive Portfolio built <br/> with React.JS.",
       img: img1,
-      link: "https://khizar-rehman-portfolio.vercel.app/",
+      routeTo: "/project-1",
     },
     {
       title: "Systems Limited Website",
       text: "One of the Top 5 Software Houses in <br/> Pakistan 'Systems Limited's' Clone Website. (React.JS)",
       img: img2,
-      link: "https://khizar-system.vercel.app/",
+      routeTo: "/project-2",
     },
     {
       title: "Social Video Downloader",
       text: "You can download any video from <br/> Facebook, Instagram, TikTok and YouTube <br/> via Link. (React.JS)",
       img: img3,
-      link: "https://social-video-downloader-theta.vercel.app/",
+      routeTo: "/project-3",
     },
     {
       title: "Portfolio to showcase Skills",
       text: "New Portfolio theme to showcase my <br/> grip on HTML, CSS, JavaScript & Bootstrap.",
       img: img4,
-      link: "https://khizar-portfolio-2.vercel.app/",
+      routeTo: "/project-4",
     },
     {
       title: "Portfolio to showcase Skills",
       text: "New Portfolio theme to showcase my <br/> grip on HTML, CSS, JavaScript & Bootstrap.",
       img: img5,
-      link: "https://khizar-portfolio-3.vercel.app/",
+      routeTo: "/project-5",
     },
     {
       title: "E-Shopping Store",
       text: "E-Commerce website with product listings, <br/> shopping cart, and checkout functionality.",
       img: img6,
-      link: "https://e-shopping-store-phi.vercel.app/",
+      routeTo: "/project-6",
     },
     {
       title: "KCS - Courier Service",
       text: "Logistics and Courier Service website <br/> with tracking and delivery options. (React.JS)",
       img: img7,
-      link: "https://khizar-courier-service-kcs.vercel.app/",
+      routeTo: "/project-7",
     },
     {
       title: "Offline Api's Handling",
       text: "Offline handling of Api's using <br/> Arrays and Local Storage. (React.JS)",
       img: img8,
-      link: "https://offline-handling-of-apis.vercel.app/",
+      routeTo: "/project-8",
     },
     {
       title: "Email Template Design",
       text: "Responsive Email Template for all <br/> Email Clients for Dark/Light mode.",
       img: img9,
-      link: "https://email-template-eight-nu.vercel.app/",
+      routeTo: "/project-9",
     },
     {
       title: "Contact Form",
       text: "HTML and CSS based form with <br/> some essential fields.",
       img: img10,
-      link: "https://contact-form-lime-one.vercel.app/",
+      routeTo: "/project-10",
     },
     {
       title: "Color Switching Toggle",
       text: "Turn the Sun into Glowing Noon <br/> and vice versa.",
       img: img11,
-      link: "https://day-night-five.vercel.app/",
+      routeTo: "/project-11",
     },
     {
       title: "Card Routing",
       text: "Route to next page with previous and next <br/> buttons with specific number of cards <br/> showing on one page (React.JS)",
       img: img12,
-      link: "https://show-cards-by-routing.vercel.app/",
+      routeTo: "/project-12",
     },
   ];
 
@@ -153,8 +156,7 @@ export default function Services() {
             title={proj.title}
             text={proj.text}
             img={proj.img}
-            link={proj.link}
-            titleClass="text-xl font-bold text-blue-600"
+            routeTo={proj.routeTo}
           />
         ))}
       </div>
