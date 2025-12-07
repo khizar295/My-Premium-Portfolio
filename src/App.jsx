@@ -26,6 +26,8 @@ import Project9 from "./Components/Pages/Project9";
 import Project10 from "./Components/Pages/Project10";
 import Project11 from "./Components/Pages/Project11";
 import Project12 from "./Components/Pages/Project12";
+import HirePage from "./Components/Pages/HirePage";
+import HireContractForm from "./Components/Pages/HireContactForm";
 
 export default function App() {
   return (
@@ -65,6 +67,8 @@ export default function App() {
         <Route path="/project-10" element={<Project10/>}/>
         <Route path="/project-11" element={<Project11/>}/>
         <Route path="/project-12" element={<Project12/>}/>
+        <Route path="/hire" element={<HirePage />} />
+        <Route path="/hire-form" element={<HireContractForm />} />
 
         {/* Add more pages here if needed */}
         

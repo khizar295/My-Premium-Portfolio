@@ -3,6 +3,7 @@ import { FaHtml5, FaCss3Alt, FaReact, FaBootstrap } from "react-icons/fa";
 import { AiOutlineJavaScript } from "react-icons/ai";
 import { RiTailwindCssFill } from "react-icons/ri";
 import profileImage from "../assets/hire-logo.jpg";
+import { Link } from "react-router-dom";
 
 export default function SkillsSection() {
   return (
@@ -49,9 +50,10 @@ export default function SkillsSection() {
             alt="profile"
             className="rounded-full mb-4 w-48 h-48 object-cover transform transition-transform duration-300 hover:scale-105"
           />
-          <button className="montserrat bg-orange-500 hover:bg-orange-400 text-black font-bold px-6 py-2 border-2 border-black">
-            Hire me
-          </button>
+<Link to="/hire" className="montserrat bg-orange-500 hover:bg-orange-400 text-black font-bold px-6 py-2 border-2 border-black text-decoration-none transition-colors duration-300">
+    Hire me
+</Link>
+
         </div>
       </div>
     </div>
