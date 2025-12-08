@@ -95,7 +95,7 @@ export default function HireContractForm() {
             type="text"
             name="name"
             value={formData.name}
-            className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none lato-regular"
+            className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none"
             placeholder="Your Name"
             onChange={handleChange}
             required
@@ -108,7 +108,7 @@ export default function HireContractForm() {
             type="email"
             name="email"
             value={formData.email}
-            className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none lato-regular"
+            className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none"
             placeholder="Your Email"
             onChange={handleChange}
             required
@@ -121,7 +121,7 @@ export default function HireContractForm() {
             name="contractType"
             value={formData.contractType}
             onChange={handleChange}
-            className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none lato-regular"
+            className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none"
           >
             <option value="hourly">Hourly</option>
             <option value="fixed">Fixed Price</option>
@@ -139,7 +139,7 @@ export default function HireContractForm() {
                 name="budgetRange"
                 value={formData.budgetRange}
                 onChange={handleChange}
-                className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none lato-regular"
+                className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none"
                 required
               >
                 <option value="">Select Budget</option>
@@ -160,7 +160,7 @@ export default function HireContractForm() {
                   type="number"
                   name="customBudget"
                   value={formData.customBudget}
-                  className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none lato-regular"
+                  className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none"
                   placeholder="Enter Budget in USD"
                   onChange={handleChange}
                   required
@@ -180,7 +180,7 @@ export default function HireContractForm() {
                 type="number"
                 name="milestoneAmount"
                 value={formData.milestoneAmount}
-                className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none lato-regular"
+                className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none"
                 placeholder="Enter milestone amount"
                 onChange={handleChange}
                 required
@@ -195,12 +195,14 @@ export default function HireContractForm() {
                 name="milestoneBudgetRange"
                 value={formData.milestoneBudgetRange}
                 onChange={handleChange}
-                className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none lato-regular"
+                className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none text-black font-bold"
                 required
               >
-                <option value="">Select Budget</option>
+                <option value="" className="font-bold text-gray-400">
+                  Select Budget
+                </option>
                 {budgetOptions.map((range) => (
-                  <option key={range} value={range}>
+                  <option key={range} value={range} className="font-bold">
                     {range}
                   </option>
                 ))}
@@ -216,7 +218,7 @@ export default function HireContractForm() {
                   type="number"
                   name="milestoneCustomBudget"
                   value={formData.milestoneCustomBudget}
-                  className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none lato-regular"
+                  className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none"
                   placeholder="Enter Milestone Budget in USD"
                   onChange={handleChange}
                   required
@@ -232,7 +234,7 @@ export default function HireContractForm() {
             type="text"
             name="subject"
             value={formData.subject}
-            className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none lato-regular"
+            className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none"
             placeholder="Project Subject"
             onChange={handleChange}
             required
@@ -244,7 +246,7 @@ export default function HireContractForm() {
           <textarea
             name="message"
             value={formData.message}
-            className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none lato-regular h-32"
+            className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none h-32"
             placeholder="Project details..."
             onChange={handleChange}
             required
@@ -253,7 +255,7 @@ export default function HireContractForm() {
 
         <button
           type="submit"
-          className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800"
+          className="montserrat bg-orange-500 hover:bg-orange-600 px-6 py-2 font-semibold border-2 border-black transition-colors duration-500 cursor-pointer text-black rounded"
         >
           Submit
         </button>

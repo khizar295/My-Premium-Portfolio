@@ -89,7 +89,7 @@ export default function Contact() {
                   value={formData.firstName}
                   onChange={handleChange}
                   placeholder="First Name *"
-                  className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 lato-regular"
+                  className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular"
                 />
                 {errors.firstName && (
                   <div className="input-error text-red-600 font-semibold text-sm">
@@ -106,7 +106,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your Email * "
-                  className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 lato-regular"
+                  className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular"
                 />
                 {errors.email && (
                   <div className="input-error text-red-600 font-semibold text-sm">
@@ -124,7 +124,7 @@ export default function Contact() {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Subject *"
-                className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 lato-regular"
+                className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular"
               />
               {errors.subject && (
                 <div className="input-error text-red-600 font-semibold text-sm">
@@ -140,7 +140,7 @@ export default function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Your Message *"
-                className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 h-32 resize-none lato-regular"
+                className="w-full border-3 border-orange-500 p-2 rounded shadow-xl focus:outline-none focus:ring-2 focus:ring-[#F97316] transition-all duration-400 lato-regular resize-none h-32"
               />
               {errors.message && (
                 <div className="input-error text-red-600 font-semibold text-sm">
@@ -151,7 +151,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="montserrat bg-orange-500 hover:bg-orange-600 px-6 py-2 font-semibold border-2 border-black transition-colors duration-500 cursor-pointer text-black rounded-md"
+              className="montserrat bg-orange-500 hover:bg-orange-600 px-6 py-2 font-semibold border-2 border-black transition-colors duration-500 cursor-pointer text-black rounded"
             >
               Send Message
             </button>

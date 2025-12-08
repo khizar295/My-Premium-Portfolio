@@ -48,14 +48,16 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 flex justify-between items-center px-[35px] pt-[5px] pb-0 border-b-2 border-black h-[15vh] w-full bg-white z-50">
+        <Link to="/" className="text-decoration-none text-black">
         <div className="flex items-center">
           <img
             src={Logo}
             alt="Logo"
             className="navbar-logo w-[45px] h-[45px] border-2 border-black rounded-full object-cover"
           />
-          <h1 className="montserrat mt-[2px] ml-[5px] font-normal">Khizar</h1>
+          <h1 className="montserrat mt-[10px] ml-[5px] font-normal">Khizar</h1>
         </div>
+        </Link>
 
         <ul className="hidden lg:flex mt-[15px]">
           {[
@@ -86,7 +88,7 @@ export default function Navbar() {
         <Link
           to="/contactpage"
           onClick={() => handleScrollTo("contact")}
-          className="montserrat hidden lg:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none"
+          className="montserrat hidden lg:flex items-center justify-center h-[70%] w-[150px] border-2 border-black font-bold bg-orange-500 text-black hover:bg-orange-600 hover:text-white transition-colors duration-500 cursor-pointer text-decoration-none rounded"
         >
           Contact Now
         </Link>

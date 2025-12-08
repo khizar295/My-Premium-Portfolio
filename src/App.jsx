@@ -66,6 +66,7 @@ export default function App() {
         <Route path="/project-12" element={<Project12 />} />
         <Route path="/hire" element={<HirePage />} />
         <Route path="/hire-form" element={<HireContractForm />} />
+        <Route path="/contactpage" element={<HirePage />} />
       </Routes>
     </BrowserRouter>
   );

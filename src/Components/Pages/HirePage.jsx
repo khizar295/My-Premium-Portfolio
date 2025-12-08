@@ -85,7 +85,7 @@ export default function HirePage() {
 
             {selected !== type.id && (
               <button
-                className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 montserrat"
+                className="montserrat bg-orange-500 hover:bg-orange-600 px-6 py-2 font-semibold border-2 border-black transition-colors duration-500 cursor-pointer text-black rounded"
                 onClick={() => setSelected(type.id)}
               >
                 Continue
@@ -97,7 +97,7 @@ export default function HirePage() {
                 <div className="text-gray-800 lato-regular">{type.extra}</div>
 
                 <button
-                  className="mt-4 bg-black text-white px-4 py-2 rounded hover:bg-gray-800 montserrat w-full"
+                  className="montserrat bg-orange-500 hover:bg-orange-600 px-6 py-2 font-semibold border-2 border-black transition-colors duration-500 cursor-pointer text-black rounded w-full"
                   onClick={() =>
                     navigate("/hire-form", {
                       state: { contractType: type.navigateType },
