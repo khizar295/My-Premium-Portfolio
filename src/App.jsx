@@ -35,8 +35,6 @@ export default function App() {
       <Navbar />
 
       <Routes>
-
-        {/* DEFAULT HOMEPAGE → ALL SECTIONS VISIBLE */}
         <Route
           path="/"
           element={
@@ -53,25 +51,21 @@ export default function App() {
           }
         />
 
-        {/* SERVICE DETAIL PAGE → ONLY NAVBAR VISIBLE */}
         <Route path="/service-detail" element={<Servicedetail />} />
-        <Route path="/project-1" element={<Project1/>}/>
-        <Route path="/project-2" element={<Project2/>}/>
-        <Route path="/project-3" element={<Project3/>}/>
-        <Route path="/project-4" element={<Project4/>}/>
-        <Route path="/project-5" element={<Project5/>}/>
-        <Route path="/project-6" element={<Project6/>}/>
-        <Route path="/project-7" element={<Project7/>}/>
-        <Route path="/project-8" element={<Project8/>}/>
-        <Route path="/project-9" element={<Project9/>}/>
-        <Route path="/project-10" element={<Project10/>}/>
-        <Route path="/project-11" element={<Project11/>}/>
-        <Route path="/project-12" element={<Project12/>}/>
+        <Route path="/project-1" element={<Project1 />} />
+        <Route path="/project-2" element={<Project2 />} />
+        <Route path="/project-3" element={<Project3 />} />
+        <Route path="/project-4" element={<Project4 />} />
+        <Route path="/project-5" element={<Project5 />} />
+        <Route path="/project-6" element={<Project6 />} />
+        <Route path="/project-7" element={<Project7 />} />
+        <Route path="/project-8" element={<Project8 />} />
+        <Route path="/project-9" element={<Project9 />} />
+        <Route path="/project-10" element={<Project10 />} />
+        <Route path="/project-11" element={<Project11 />} />
+        <Route path="/project-12" element={<Project12 />} />
         <Route path="/hire" element={<HirePage />} />
         <Route path="/hire-form" element={<HireContractForm />} />
-
-        {/* Add more pages here if needed */}
-        
       </Routes>
     </BrowserRouter>
   );

@@ -34,7 +34,9 @@ export default function Testinomials() {
         Testinomial
       </button>
       <div className="row">
-        <h1 className="text-[60px] font-[650] pt-7 montserrat">Client's Kind Word</h1>
+        <h1 className="text-[60px] font-[650] pt-7 montserrat">
+          Client's Kind Word
+        </h1>
       </div>
       <div className="row">
         {array.map((item, index) => (

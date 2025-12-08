@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import emailjs from "emailjs-com";
-import contactImage from "../assets/contact-image.jpg"; // optional
+import contactImage from "../assets/contact-image.jpg";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -31,7 +31,6 @@ export default function Contact() {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      // EmailJS template parameters
       const templateParams = {
         firstName: formData.firstName,
         email: formData.email,
@@ -39,13 +38,12 @@ export default function Contact() {
         message: formData.message,
       };
 
-      // Send email via EmailJS
       emailjs
         .send(
-          "service_epmuhir",      // replace with your EmailJS Service ID
-          "template_u5bkhdb",     // replace with your EmailJS Template ID
+          "service_epmuhir",
+          "template_u5bkhdb",
           templateParams,
-          "kMsgfdl-ffTyz0TRX"       // replace with your EmailJS Public Key
+          "kMsgfdl-ffTyz0TRX"
         )
         .then(
           () => {
@@ -79,15 +77,10 @@ export default function Contact() {
         </h1>
       </div>
 
-      {/* Main Flex Row */}
       <div className="flex flex-col lg:flex-row gap-6 mt-10">
-        
-        {/* Left Box - Form */}
         <div className="flex-1 bg-white p-7 border-3 border-black shadow-lg pt-14">
           <form onSubmit={handleSubmit} noValidate>
             <div className="flex flex-col md:flex-row gap-4 mb-4">
-              
-              {/* First Name */}
               <div className="flex-1">
                 <p className="font-bold text-gray-400 montserrat">First Name</p>
                 <input
@@ -105,7 +98,6 @@ export default function Contact() {
                 )}
               </div>
 
-              {/* Email */}
               <div className="flex-1">
                 <p className="font-bold text-gray-400 montserrat">Your Email</p>
                 <input
@@ -124,7 +116,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Subject */}
             <div className="mb-4">
               <p className="font-bold text-gray-400 montserrat">Subject</p>
               <input
@@ -142,7 +133,6 @@ export default function Contact() {
               )}
             </div>
 
-            {/* Message */}
             <div className="mb-4">
               <p className="font-bold text-gray-400 montserrat">Your Message</p>
               <textarea
@@ -159,7 +149,6 @@ export default function Contact() {
               )}
             </div>
 
-            {/* Submit */}
             <button
               type="submit"
               className="montserrat bg-orange-500 hover:bg-orange-600 px-6 py-2 font-semibold border-2 border-black transition-colors duration-500 cursor-pointer text-black rounded-md"
@@ -169,9 +158,7 @@ export default function Contact() {
           </form>
         </div>
 
-        {/* Right Box - Information */}
         <div className="flex-1 p-6 rounded-xl flex flex-col items-start">
-          {/* Phone */}
           <div className="flex items-start mb-4">
             <FaPhoneAlt
               className="text-white mr-3 mt-2 bg-blue-800 p-2 rounded-3xl"
@@ -184,7 +171,6 @@ export default function Contact() {
           </div>
           <hr className="w-full mb-3 border-4 border-black" />
 
-          {/* Email */}
           <div className="flex items-start mb-4">
             <FaEnvelope
               className="text-white mr-3 mt-2 bg-blue-800 p-2 rounded-3xl"
@@ -199,7 +185,6 @@ export default function Contact() {
           </div>
           <hr className="w-full mb-3 border-4 border-black" />
 
-          {/* Location */}
           <div className="flex items-start mb-4">
             <FaMapMarkerAlt
               className="text-white mr-3 mt-2 bg-blue-800 p-2 rounded-3xl"
@@ -214,7 +199,6 @@ export default function Contact() {
           </div>
           <hr className="w-full mb-3 border-4 border-black" />
 
-          {/* Contact Button */}
           <h1
             style={{ objectFit: "cover", width: "80%", margin: "auto" }}
             className="h-[100px] mt-4 rounded-xl w-full hover:scale-105 transition-transform duration-500 cursor-pointer shadow-lg text-center py-8 md:py-6 lg:py-5 bg-white lato-bold"

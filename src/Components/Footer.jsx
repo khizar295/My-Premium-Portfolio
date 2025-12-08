@@ -46,7 +46,9 @@ export default function Footer() {
 
       <div className="flex items-center text-gray-600 text-sm font-medium">
         <FaRegCopyright className="mr-1" />
-        <span className="montserrat">Khizar Rehman 2023-2025 — All Rights Reserved</span>
+        <span className="montserrat">
+          Khizar Rehman 2023-2025 — All Rights Reserved
+        </span>
       </div>
     </footer>
   );

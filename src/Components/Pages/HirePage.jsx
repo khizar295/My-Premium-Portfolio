@@ -17,7 +17,8 @@ export default function HirePage() {
             <span className="text-green-600">$7/hour</span>
           </p>
           <p>
-            Ideal for evolving scope, continuous updates, or long-term work. You pay only for tracked hours.
+            Ideal for evolving scope, continuous updates, or long-term work. You
+            pay only for tracked hours.
           </p>
         </>
       ),
@@ -35,7 +36,8 @@ export default function HirePage() {
             Agree on a single project amount (example: $100, $250, etc.).
           </p>
           <p>
-            You pay only when final work is delivered. Ideal for small and planned projects.
+            You pay only when final work is delivered. Ideal for small and
+            planned projects.
           </p>
         </>
       ),
@@ -53,7 +55,8 @@ export default function HirePage() {
             Example milestones: Design → Development → Testing → Deployment.
           </p>
           <p>
-            Each milestone has its own price and timeline—ideal for medium or large projects.
+            Each milestone has its own price and timeline—ideal for medium or
+            large projects.
           </p>
         </>
       ),
@@ -74,7 +77,9 @@ export default function HirePage() {
             key={type.id}
             className="border p-5 rounded-xl shadow transition-all duration-300"
           >
-            <h3 className="text-xl font-semibold mb-2 montserrat">{type.title}</h3>
+            <h3 className="text-xl font-semibold mb-2 montserrat">
+              {type.title}
+            </h3>
 
             <p className="text-gray-700 mb-4 lato-regular">{type.desc}</p>
 
@@ -94,7 +99,9 @@ export default function HirePage() {
                 <button
                   className="mt-4 bg-black text-white px-4 py-2 rounded hover:bg-gray-800 montserrat w-full"
                   onClick={() =>
-                    navigate("/hire-form", { state: { contractType: type.navigateType } })
+                    navigate("/hire-form", {
+                      state: { contractType: type.navigateType },
+                    })
                   }
                 >
                   {type.finalBtn}

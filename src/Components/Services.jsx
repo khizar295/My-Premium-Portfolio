@@ -21,7 +21,6 @@ export default function Services() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-around mt-3">
-        {/* 01 */}
         <div className="bg-white m-2 p-[35px] border-2 border-black transition-all duration-1000 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
           <h1 className="text-[60px] font-[700] montserrat">01</h1>
           <h4 className="font-[650] montserrat2">Website Design</h4>
@@ -43,7 +42,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 02 */}
         <div className="bg-white m-2 p-[35px] border-2 border-black transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
           <h1 className="text-[60px] font-[700] montserrat">02</h1>
           <h4 className="font-[650] montserrat2">Website Development</h4>
@@ -65,7 +63,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 03 */}
         <div className="bg-white m-2 p-[35px] border-2 border-black transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
           <h1 className="text-[60px] font-[700] montserrat">03</h1>
           <h4 className="font-[650] montserrat2">Pixel Perfect Elements</h4>
@@ -87,7 +84,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 04 */}
         <div className="bg-white m-2 p-[35px] border-2 border-black transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
           <h1 className="text-[60px] font-[700] montserrat">04</h1>
           <h4 className="font-[650] montserrat2">Responsiveness</h4>
@@ -109,7 +105,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 05 */}
         <div className="bg-white m-2 p-[35px] border-2 border-black transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
           <h1 className="text-[60px] font-[700] montserrat">05</h1>
           <h4 className="font-[650] montserrat2">UI/UX Design</h4>
@@ -131,7 +126,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 06 */}
         <div className="bg-white m-2 p-[35px] border-2 border-black transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
           <h1 className="text-[60px] font-[700] montserrat">06</h1>
           <h4 className="font-[650] montserrat2">Logic into Reality</h4>

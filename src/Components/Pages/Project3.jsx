@@ -9,38 +9,19 @@ import img7 from "../../assets/slider-proj-3-7.png";
 import img8 from "../../assets/slider-proj-3-8.png";
 import img9 from "../../assets/slider-proj-3-9.png";
 
-/**
- * Project1 component
- *
- * Behavior:
- * - Left: heading + paragraph + fake recaptcha (spinner -> checkbox)
- * - Learn More button disabled until checkbox checked
- * - Clicking Learn More opens modal with 3s countdown and then redirects
- * - Right: auto-scrolling infinite slider showing 3 items by default (add items to slides array)
- *
- * Notes:
- * - Replace slides array items with real image URLs or imports if desired.
- * - Update redirectUrl to the link you want to redirect to after countdown.
- */
-
 export default function Project3() {
-  // change this to wherever you want to redirect after modal countdown
   const redirectUrl = "https://social-video-downloader-theta.vercel.app/";
 
-  // recaptcha spinner state
   const [recaptchaLoading, setRecaptchaLoading] = useState(true);
   const [verified, setVerified] = useState(false);
 
-  // modal and countdown
   const [modalOpen, setModalOpen] = useState(false);
   const [countdown, setCountdown] = useState(3);
 
-  // slider refs & logic
   const sliderRef = useRef(null);
   const scrollRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false); // not used for pause since required non-pausable but kept if needed
+  const [isPaused, setIsPaused] = useState(false);
 
-  // sample slides data — replace `bg` or `img` with actual imports/urls
   const slides = [
     { id: 1, title: "Project Shot 1", img: img1 },
     { id: 2, title: "Project Shot 2", img: img2 },
@@ -51,13 +32,10 @@ export default function Project3() {
     { id: 7, title: "Project Shot 7", img: img7 },
     { id: 8, title: "Project Shot 8", img: img8 },
     { id: 9, title: "Project Shot 9", img: img9 },
-    // Add more images here anytime
   ];
 
-  // duplicate slides for seamless loop
   const doubled = [...slides, ...slides];
 
-  // start pseudo-recaptcha spinner -> show checkbox after 3s
   useEffect(() => {
     setRecaptchaLoading(true);
     const t = setTimeout(() => {
@@ -66,7 +44,6 @@ export default function Project3() {
     return () => clearTimeout(t);
   }, []);
 
-  // modal countdown + redirect
   useEffect(() => {
     let timer;
     if (modalOpen) {
@@ -75,7 +52,6 @@ export default function Project3() {
         setCountdown((c) => {
           if (c <= 1) {
             clearInterval(timer);
-            // redirect after short delay to allow UI update
             setTimeout(() => {
               window.location.href = redirectUrl;
             }, 300);
@@ -88,20 +64,16 @@ export default function Project3() {
     return () => clearInterval(timer);
   }, [modalOpen, redirectUrl]);
 
-  // infinite auto-scroll logic
   useEffect(() => {
     const el = sliderRef.current;
     if (!el) return;
 
-    // choose a speed (pixels per frame)
-    const speed = 0.5; // smaller number = slower
+    const speed = 0.5;
     let rafId;
     let start;
 
     const step = () => {
-      // move scrollLeft forward
       el.scrollLeft += speed;
-      // when we've scrolled half (original slides length), reset to start
       if (el.scrollLeft >= el.scrollWidth / 2) {
         el.scrollLeft = el.scrollLeft - el.scrollWidth / 2;
       }
@@ -112,20 +84,16 @@ export default function Project3() {
     return () => cancelAnimationFrame(rafId);
   }, [doubled.length]);
 
-  // ensure on resize we keep proper position (optional)
   useEffect(() => {
     const onResize = () => {
       const el = sliderRef.current;
       if (!el) return;
-      // no-op; placeholder in case you want reposition behavior
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  // checkbox toggle handler
   const toggleVerify = () => {
-    // only allow checking after recaptcha spinner finished
     if (recaptchaLoading) return;
     setVerified((v) => !v);
   };
@@ -134,7 +102,6 @@ export default function Project3() {
     <div className="w-full px-4 pb-0 mt-40 lg:mt-10 md:py-12 lg:py-16">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-          {/* LEFT: Heading + desc + fake recaptcha + button */}
           <div className="w-full lg:w-1/2">
             <div className="bg-white p-8 md:p-10 rounded-xl shadow-lg border border-gray-200">
               <h1 className="text-3xl md:text-4xl font-extrabold montserrat mb-4 text-gray-900">
@@ -149,12 +116,9 @@ export default function Project3() {
                 be redirected to a live demo.
               </p>
 
-              {/* fake Google Recaptcha box */}
               <div className="mt-4">
                 <div className="w-full bg-gray-50 border border-gray-300 rounded-lg p-4 flex items-center justify-between">
-                  {/* left area: spinner or checkbox */}
                   <div className="flex items-center gap-4">
-                    {/* spinner */}
                     {recaptchaLoading ? (
                       <div className="flex items-center gap-3">
                         <div
@@ -171,7 +135,6 @@ export default function Project3() {
                         </div>
                       </div>
                     ) : (
-                      // checkbox lookalike
                       <label
                         className={`flex items-center gap-3 cursor-pointer select-none`}
                         onClick={toggleVerify}
@@ -220,7 +183,6 @@ export default function Project3() {
                     )}
                   </div>
 
-                  {/* right: google-like icon & domain */}
                   <div className="flex items-center gap-3">
                     <div className="flex items-center gap-2">
                       <svg
@@ -240,15 +202,25 @@ export default function Project3() {
                   </div>
                 </div>
 
-                {/* small caption under box like reCAPTCHA */}
                 <div className="mt-2 text-xs text-gray-500">
                   This site is protected by reCAPTCHA and the Google{" "}
-                  <a href="https://policies.google.com/privacy?hl=en-US" target="_blank">Privacy Policy</a> and{" "}
-                  <a href="https://policies.google.com/terms?hl=en" target="_blank">Terms of Service</a> apply.
+                  <a
+                    href="https://policies.google.com/privacy?hl=en-US"
+                    target="_blank"
+                  >
+                    Privacy Policy
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    href="https://policies.google.com/terms?hl=en"
+                    target="_blank"
+                  >
+                    Terms of Service
+                  </a>{" "}
+                  apply.
                 </div>
               </div>
 
-              {/* Learn More button */}
               <div className="mt-6">
                 <button
                   onClick={() => setModalOpen(true)}
@@ -267,14 +239,12 @@ export default function Project3() {
             </div>
           </div>
 
-          {/* RIGHT: Auto-scrolling infinite slider */}
           <div className="w-full lg:w-1/2 mt-10 lg:mt-25">
             <div className="rounded-xl overflow-hidden border border-gray-200 shadow-lg bg-white">
               <div
                 ref={sliderRef}
                 className="flex gap-6 py-6 px-4 md:px-6 items-stretch"
                 style={{
-                  // hide scrollbar visually (native scroll still used by RAF)
                   overflowX: "hidden",
                   scrollBehavior: "smooth",
                 }}
@@ -296,7 +266,6 @@ export default function Project3() {
                   >
                     <div className="p-1 flex justify-center bg-black/25 w-full text-white">
                       <div className="text-lg font-bold">{s.title}</div>
-                      {/* <div className="text-sm opacity-90 mt-1">A quick project preview</div> */}
                     </div>
                   </div>
                 ))}
@@ -307,7 +276,6 @@ export default function Project3() {
         </div>
       </div>
 
-      {/* Modal */}
       {modalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
           <div className="absolute inset-0 bg-black/40" />
@@ -324,7 +292,6 @@ export default function Project3() {
             <div className="mt-4 flex justify-end gap-3">
               <button
                 onClick={() => {
-                  // allow user to close and cancel redirect
                   setModalOpen(false);
                 }}
                 className="px-4 py-2 border rounded-md text-gray-700 hover:bg-gray-100"
@@ -333,7 +300,6 @@ export default function Project3() {
               </button>
               <button
                 onClick={() => {
-                  // immediate redirect
                   window.location.href = redirectUrl;
                 }}
                 className="px-4 py-2 bg-orange-500 text-black rounded-md font-semibold"

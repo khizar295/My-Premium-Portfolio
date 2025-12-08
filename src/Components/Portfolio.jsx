@@ -43,7 +43,6 @@ export default function Services() {
           ></p>
         </div>
 
-        {/* Arrow now navigates to a specific page */}
         <button
           onClick={() => navigate(routeTo)}
           className="bg-orange-600 text-black h-[50px] w-12 flex justify-center items-center text-xl rounded hover:bg-orange-500 transition-all duration-300"
@@ -146,7 +145,9 @@ export default function Services() {
       </button>
 
       <div className="row">
-        <h1 className="montserrat text-[60px] font-[650] pt-7">Latest Projects</h1>
+        <h1 className="montserrat text-[60px] font-[650] pt-7">
+          Latest Projects
+        </h1>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-around mt-3 transition-all duration-700 ease-in-out">

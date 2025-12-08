@@ -89,7 +89,6 @@ export default function HireContractForm() {
       <h1 className="text-3xl font-bold mb-6 montserrat">Hire Form</h1>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* NAME */}
         <div>
           <label className="font-bold text-gray-400">Name</label>
           <input
@@ -103,9 +102,8 @@ export default function HireContractForm() {
           />
         </div>
 
-        {/* EMAIL */}
         <div>
-          <label className="font-semibold">Email</label>
+          <label className="font-bold text-gray-400">Email</label>
           <input
             type="email"
             name="email"
@@ -117,9 +115,8 @@ export default function HireContractForm() {
           />
         </div>
 
-        {/* CONTRACT TYPE */}
         <div>
-          <label className="font-semibold">Contract Type</label>
+          <label className="font-bold text-gray-400">Contract Type</label>
           <select
             name="contractType"
             value={formData.contractType}
@@ -132,11 +129,12 @@ export default function HireContractForm() {
           </select>
         </div>
 
-        {/* FIXED PRICE FIELDS */}
         {formData.contractType === "fixed" && (
           <>
             <div>
-              <label className="font-semibold">Select Your Budget</label>
+              <label className="font-bold text-gray-400">
+                Select Your Budget
+              </label>
               <select
                 name="budgetRange"
                 value={formData.budgetRange}
@@ -155,7 +153,9 @@ export default function HireContractForm() {
 
             {formData.budgetRange === "Other Amount" && (
               <div>
-                <label className="font-semibold">Enter Custom Budget</label>
+                <label className="font-bold text-gray-400">
+                  Enter Custom Budget
+                </label>
                 <input
                   type="number"
                   name="customBudget"
@@ -170,11 +170,12 @@ export default function HireContractForm() {
           </>
         )}
 
-        {/* PER MILESTONE FIELDS */}
         {formData.contractType === "milestone" && (
           <>
             <div>
-              <label className="font-semibold">Amount for 1st Milestone</label>
+              <label className="font-bold text-gray-400">
+                Amount for 1st Milestone
+              </label>
               <input
                 type="number"
                 name="milestoneAmount"
@@ -187,7 +188,9 @@ export default function HireContractForm() {
             </div>
 
             <div>
-              <label className="font-semibold">Select Budget for Milestones</label>
+              <label className="font-bold text-gray-400">
+                Select Budget for Milestones
+              </label>
               <select
                 name="milestoneBudgetRange"
                 value={formData.milestoneBudgetRange}
@@ -206,7 +209,9 @@ export default function HireContractForm() {
 
             {formData.milestoneBudgetRange === "Other Amount" && (
               <div>
-                <label className="font-semibold">Enter Custom Milestone Budget</label>
+                <label className="font-bold text-gray-400">
+                  Enter Custom Milestone Budget
+                </label>
                 <input
                   type="number"
                   name="milestoneCustomBudget"
@@ -221,9 +226,8 @@ export default function HireContractForm() {
           </>
         )}
 
-        {/* SUBJECT */}
         <div>
-          <label className="font-semibold">Subject</label>
+          <label className="font-bold text-gray-400">Subject</label>
           <input
             type="text"
             name="subject"
@@ -235,9 +239,8 @@ export default function HireContractForm() {
           />
         </div>
 
-        {/* MESSAGE */}
         <div>
-          <label className="font-semibold">Message</label>
+          <label className="font-bold text-gray-400">Message</label>
           <textarea
             name="message"
             value={formData.message}

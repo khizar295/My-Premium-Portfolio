@@ -57,7 +57,6 @@ export default function Navbar() {
           <h1 className="montserrat mt-[2px] ml-[5px] font-normal">Khizar</h1>
         </div>
 
-        {/* Desktop menu only (lg and above) */}
         <ul className="hidden lg:flex mt-[15px]">
           {[
             { id: "home", label: "HOME" },
@@ -84,7 +83,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop Contact Now button only */}
         <Link
           to="/contactpage"
           onClick={() => handleScrollTo("contact")}
@@ -93,7 +91,6 @@ export default function Navbar() {
           Contact Now
         </Link>
 
-        {/* Hamburger menu for tablet and mobile */}
         <div
           className={`lg:hidden cursor-pointer transition-transform duration-500 ${
             isOpen ? "rotate-180" : "rotate-0"
@@ -108,13 +105,11 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Scroll progress bar */}
       <div
         className="fixed top-[15vh] left-0 h-[3px] bg-orange-500 z-50 transition-all duration-75"
         style={{ width: `${scrollProgress}%` }}
       ></div>
 
-      {/* Hamburger menu dropdown for tablet and mobile */}
       <div
         className={`fixed left-0 w-full bg-white border-t-2 border-black flex flex-col items-center py-6 lg:hidden z-40 transition-all duration-500 ease-in-out ${
           isOpen
@@ -147,7 +142,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Hamburger menu Contact Now button (tablet & mobile) */}
         <Link
           to="/contactpage"
           onClick={() => handleScrollTo("contact")}

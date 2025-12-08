@@ -34,12 +34,16 @@ export default function SkillsSection() {
 
             <div className="skill-card flex items-center border p-3 rounded">
               <FaBootstrap size={40} color="#5A4FCF" />
-              <span className="ml-3 font-semibold montserrat2">Bootstrap 5</span>
+              <span className="ml-3 font-semibold montserrat2">
+                Bootstrap 5
+              </span>
             </div>
 
             <div className="skill-card flex items-center border p-3 rounded">
               <RiTailwindCssFill size={40} color="#5A4FCF" />
-              <span className="ml-3 font-semibold montserrat2">Tailwind CSS</span>
+              <span className="ml-3 font-semibold montserrat2">
+                Tailwind CSS
+              </span>
             </div>
           </div>
         </div>
@@ -50,10 +54,12 @@ export default function SkillsSection() {
             alt="profile"
             className="rounded-full mb-4 w-48 h-48 object-cover transform transition-transform duration-300 hover:scale-105"
           />
-<Link to="/hire" className="montserrat bg-orange-500 hover:bg-orange-400 text-black font-bold px-6 py-2 border-2 border-black text-decoration-none transition-colors duration-300">
-    Hire me
-</Link>
-
+          <Link
+            to="/hire"
+            className="montserrat bg-orange-500 hover:bg-orange-400 text-black font-bold px-6 py-2 border-2 border-black text-decoration-none transition-colors duration-300"
+          >
+            Hire me
+          </Link>
         </div>
       </div>
     </div>
