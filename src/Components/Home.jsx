@@ -5,41 +5,73 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="mt-[200px] flex flex-col md:flex-row w-full h-auto items-center justify-center home-container"
+      className="min-h-screen lg:min-h-screen md:min-h-[80vh] flex flex-col md:flex-row items-center justify-center px-6 md:px-12 lg:px-24 pt-40 lg:pt-40 md:pt-40 py-20 lg:py-20 md:py-0 bg-gradient-to-br from-[#fefaf5] to-[#fff7f0]"
     >
-      <div className="mt-[45px] text-section">
-        <button className="montserrat relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
-          Hello
-        </button>
+      {/* Text Section */}
+      <div className="flex-1 text-center md:text-left max-w-xl">
+        {/* Gentle greeting chip */}
+        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/70 backdrop-blur-sm shadow-sm border border-[#f3e3d3] mb-6">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-300 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-rose-400"></span>
+          </span>
+          <span className="text-sm font-medium text-stone-600 tracking-wide">Welcome • I'm available</span>
+        </div>
 
-        <h1 className="montserrat text-[70px] font-[650] leading-tight mt-[50px] inline-block">
-          I Have Design Experience
+        {/* Main heading */}
+        <h1 className="font-display text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-stone-800 mb-5">
+          I Have Design <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-rose-500">
+            Experience
+          </span>
         </h1>
-        <p className="text-[21px] font-[470] mt-2 lato-regular">
-          I design and develop solutions for clients of all sizes, <br />
-          specializing in crafting stylish, modern websites, <br /> web
-          applications, and online stores.
+
+        {/* Description */}
+        <p className="text-stone-600 text-lg lg:text-xl font-light leading-relaxed mb-8 max-w-md mx-auto md:mx-0">
+          I design and develop solutions for clients of all sizes, specializing in crafting stylish,
+          modern websites, web applications, and online stores.
         </p>
-        <button className="montserrat bg-[rgb(84,84,231)] border-2 border-black font-bold text-white h-[60px] w-[130px] mt-6 hover:bg-black hover:text-white transition-colors duration-500">
-          Let's Talk
+
+        {/* CTA Button */}
+        <button className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-stone-800 to-stone-700 text-white font-medium shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 overflow-hidden">
+          <span className="relative z-10">Let's Talk</span>
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </button>
       </div>
 
-      <div className="md:ml-[100px] mt-10 md:mt-0 image-section">
-        <div className="group inline-block image-wrapper">
-          <div className="border-2 border-black h-[35px] w-[370px] text-right pr-2 pt-[6px] transition-transform duration-300 ease-in-out group-hover:scale-105 window-header">
-            <button className="h-[20px] w-[20px] rounded-full bg-red-500 mx-1 inline-block p-0 border-none"></button>
-            <button className="h-[20px] w-[20px] rounded-full bg-yellow-400 mx-1 inline-block p-0 border-none"></button>
-            <button className="h-[20px] w-[20px] rounded-full bg-green-500 mx-1 inline-block p-0 border-none"></button>
+      {/* Image Section */}
+      <div className="flex-1 flex justify-center mt-12 md:mt-0">
+        <div className="relative group w-full max-w-md mx-auto">
+          {/* Soft decorative background blur */}
+          <div className="absolute -inset-4 bg-gradient-to-r from-amber-100/40 to-rose-100/40 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
+
+          {/* Card wrapper */}
+          <div className="relative bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-1">
+            {/* Gentle header with dots */}
+            <div className="flex items-center gap-2 px-5 py-3 bg-white/40 border-b border-stone-100">
+              <div className="flex gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-rose-200"></div>
+                <div className="w-3 h-3 rounded-full bg-amber-200"></div>
+                <div className="w-3 h-3 rounded-full bg-emerald-200"></div>
+              </div>
+              <div className="flex-1 text-center text-xs text-stone-400 font-mono">Front-End Web Developer</div>
+            </div>
+
+            {/* Image container */}
+            <div className="p-4 flex items-center justify-center">
+              <div className="overflow-hidden rounded-xl">
+                <img
+                  src={Logo}
+                  alt="Design portfolio showcase"
+                  className="w-full h-auto object-cover transition-all duration-700 ease-out group-hover:scale-105 rounded-xl text-center"
+                />
+              </div>
+            </div>
           </div>
 
-          <div className="border-b-2 border-l-2 border-r-2 border-black w-[370px] max-w-full p-3 transition-transform duration-300 ease-in-out group-hover:scale-105 window-body">
-            <img
-              src={Logo}
-              alt="logo"
-              className="w-[320px] h-[400px] m-auto object-cover transition-transform duration-300 ease-in-out group-hover:scale-102 responsive-image"
-            />
-          </div>
+          {/* Soft accent glow */}
+          <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-amber-200/30 rounded-full blur-3xl -z-10"></div>
+          <div className="absolute -top-6 -left-6 w-40 h-40 bg-rose-200/30 rounded-full blur-3xl -z-10"></div>
         </div>
       </div>
     </div>

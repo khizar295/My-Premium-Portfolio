@@ -15,7 +15,7 @@ import img10 from "../assets/proj-10.png";
 import img11 from "../assets/proj-11.png";
 import img12 from "../assets/proj-12.png";
 
-export default function Services() {
+export default function Portfolio() {
   const navigate = useNavigate();
   const [page, setPage] = useState(1);
 
@@ -28,27 +28,35 @@ export default function Services() {
   };
 
   const ServiceCard = ({ title, text, img, routeTo }) => (
-    <div className="portfolio-box bg-white m-2 border-2 border-black flex flex-col items-center w-full sm:w-auto transition-all duration-500 hover:-translate-y-[10px] hover:shadow-[10px_10px_10px_black]">
-      <img
-        src={img}
-        alt={title}
-        className="w-full h-[200px] object-cover mb-4 border border-black project-img"
-      />
-      <div className="flex items-center w-full justify-between p-[20px]">
-        <div>
-          <h4 className="montserrat2 font-[650] text-[20px]">{title}</h4>
-          <p
-            className="text-[15px] lato-regular"
-            dangerouslySetInnerHTML={{ __html: text }}
-          ></p>
+    <div className="group relative bg-white/60 backdrop-blur-sm rounded-2xl border border-white/50 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+      <div className="relative overflow-hidden h-[220px]">
+        <img
+          src={img}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      </div>
+      
+      <div className="p-5">
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex-1">
+            <h4 className="font-display font-semibold text-stone-800 text-lg mb-2 line-clamp-1">
+              {title}
+            </h4>
+            <p 
+              className="text-stone-600 text-sm leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: text }}
+            ></p>
+          </div>
+          
+          <button
+            onClick={() => navigate(routeTo)}
+            className="relative flex-shrink-0 w-10 h-10 rounded-full bg-stone-800 text-white flex items-center justify-center hover:bg-gradient-to-r hover:from-amber-500 hover:to-rose-500 transition-all duration-300 group/btn hover:scale-110"
+          >
+            <FiArrowRight className="text-xl transition-transform duration-300 group-hover/btn:translate-x-0.5" />
+          </button>
         </div>
-
-        <button
-          onClick={() => navigate(routeTo)}
-          className="bg-orange-600 text-black h-[50px] w-12 flex justify-center items-center text-xl rounded hover:bg-orange-500 transition-all duration-300"
-        >
-          <FiArrowRight className="text-3xl" />
-        </button>
       </div>
     </div>
   );
@@ -138,63 +146,87 @@ export default function Services() {
   return (
     <div
       id="portfolio"
-      className="w-full h-auto p-3 bg-[blanchedalmond] overflow-x-hidden mt-15 relative p-4"
+      className="w-full bg-gradient-to-br from-[#fefaf5] to-[#fff7f0] py-16 px-4 md:px-8 lg:px-16 overflow-hidden"
     >
-      <button className="montserrat relative transform rotate-[-13deg] px-6 py-3 bg-amber-200 hover:bg-amber-100 text-black font-semibold shadow-md before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-gray-400 before:top-1/2 before:-left-1.5 before:-translate-y-1/2 after:content-[''] after:absolute after:w-4 after:h-[1px] after:bg-gray-400 after:top-1/2 after:-translate-y-1/2 after:-left-3">
-        Portfolio
-      </button>
-
-      <div className="row">
-        <h1 className="montserrat text-[60px] font-[650] pt-7">
-          Latest Projects
-        </h1>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-around mt-3 transition-all duration-700 ease-in-out">
-        {currentProjects.map((proj, i) => (
-          <ServiceCard
-            key={i}
-            title={proj.title}
-            text={proj.text}
-            img={proj.img}
-            routeTo={proj.routeTo}
-          />
-        ))}
-      </div>
-
-      <div className="flex justify-center items-center gap-4 mt-6">
-        <button
-          onClick={handlePrev}
-          disabled={page === 1}
-          className={`montserrat px-4 py-2 border-2 border-black font-bold ${
-            page === 1 ? "opacity-40 cursor-not-allowed" : "hover:bg-black/10"
-          }`}
-        >
-          Previous
-        </button>
-
-        <div className="flex gap-2">
-          <div
-            className={`h-3 w-3 rounded-full ${
-              page === 1 ? "bg-black" : "bg-gray-400"
-            }`}
-          ></div>
-          <div
-            className={`h-3 w-3 rounded-full ${
-              page === 2 ? "bg-black" : "bg-gray-400"
-            }`}
-          ></div>
+      <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center justify-center mb-4">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-200/40 to-rose-200/40 rounded-full blur-xl"></div>
+              <button className="relative px-6 py-2 rounded-full bg-white/70 backdrop-blur-sm text-stone-700 font-medium text-sm shadow-sm border border-stone-100">
+                My Work
+              </button>
+            </div>
+          </div>
+          
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-stone-800 mb-4">
+            Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-rose-500">Projects</span>
+          </h1>
+          <p className="text-stone-600 text-lg max-w-2xl mx-auto">
+            A showcase of my recent work and creative endeavors
+          </p>
         </div>
 
-        <button
-          onClick={handleNext}
-          disabled={page === 2}
-          className={`montserrat px-4 py-2 border-2 border-black font-bold ${
-            page === 2 ? "opacity-40 cursor-not-allowed" : "hover:bg-black/10"
-          }`}
-        >
-          Next
-        </button>
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
+          {currentProjects.map((proj, i) => (
+            <ServiceCard
+              key={i}
+              title={proj.title}
+              text={proj.text}
+              img={proj.img}
+              routeTo={proj.routeTo}
+            />
+          ))}
+        </div>
+
+        {/* Pagination */}
+        <div className="flex justify-center items-center gap-6 mt-12">
+          <button
+            onClick={handlePrev}
+            disabled={page === 1}
+            className={`group relative px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              page === 1 
+                ? "opacity-40 cursor-not-allowed text-stone-400" 
+                : "text-stone-700 hover:text-stone-900"
+            }`}
+          >
+            <span className="relative z-10">Previous</span>
+            {page !== 1 && (
+              <div className="absolute inset-0 bg-stone-100 rounded-full -z-0 group-hover:bg-stone-200 transition-colors duration-300"></div>
+            )}
+          </button>
+
+          <div className="flex gap-2">
+            {[1, 2].map((num) => (
+              <button
+                key={num}
+                onClick={() => setPage(num)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  page === num 
+                    ? "w-6 bg-gradient-to-r from-amber-500 to-rose-500" 
+                    : "bg-stone-300 hover:bg-stone-400"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={handleNext}
+            disabled={page === 2}
+            className={`group relative px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              page === 2 
+                ? "opacity-40 cursor-not-allowed text-stone-400" 
+                : "text-stone-700 hover:text-stone-900"
+            }`}
+          >
+            <span className="relative z-10">Next</span>
+            {page !== 2 && (
+              <div className="absolute inset-0 bg-stone-100 rounded-full -z-0 group-hover:bg-stone-200 transition-colors duration-300"></div>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );

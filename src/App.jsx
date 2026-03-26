@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./App.css";
@@ -29,9 +29,26 @@ import Project12 from "./Components/Pages/Project12";
 import HirePage from "./Components/Pages/HirePage";
 import HireContractForm from "./Components/Pages/HireContactForm";
 
+// ScrollToTop component to handle scrolling on route changes
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Smooth scroll to top with a small delay to ensure content is loaded
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  }, [pathname]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
@@ -46,7 +63,6 @@ export default function App() {
               <Portfolio />
               <Testinomials />
               <Contact />
-              <Footer />
             </>
           }
         />
@@ -68,6 +84,7 @@ export default function App() {
         <Route path="/hire-form" element={<HireContractForm />} />
         <Route path="/contactpage" element={<HirePage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
